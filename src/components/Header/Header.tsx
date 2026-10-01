@@ -1,6 +1,6 @@
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import { contacts, navLinks } from '../../data/content';
+import { contacts, media, navLinks } from '../../data/content';
 import styles from './Header.module.css';
 
 export function Header() {
@@ -34,7 +34,9 @@ export function Header() {
 
       <div className={styles.bar}>
         <a href="#" className={styles.logo} aria-label="Сюдзин — на главную">
-          <span className={styles.logoMark}>道</span>
+          <span className={styles.logoMark}>
+            <img src={media.logo} alt="" width={44} height={44} />
+          </span>
           <span className={styles.logoText}>
             Сюдзин
             <small>Karate WKF</small>

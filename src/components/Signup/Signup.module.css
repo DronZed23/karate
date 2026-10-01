@@ -1,11 +1,33 @@
 .section {
   composes: sectionBand from '../../styles/shared.module.css';
+  position: relative;
+  overflow: hidden;
   padding-block: clamp(72px, 12vw, 120px);
   color: #f8f6f2;
 }
 
+.section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/media/gallery-dojo.jpg') center / cover no-repeat;
+  opacity: 0.22;
+  transform: scale(1.04);
+}
+
+.section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, rgba(12, 15, 20, 0.92), rgba(12, 15, 20, 0.78)),
+    radial-gradient(circle at 80% 20%, rgba(201, 162, 39, 0.15), transparent 45%);
+}
+
 .container {
   composes: shell from '../../styles/shared.module.css';
+  position: relative;
+  z-index: 1;
   display: grid;
   gap: 40px;
   align-items: center;

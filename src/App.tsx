@@ -3,6 +3,7 @@ import { AgeGroups } from './components/AgeGroups/AgeGroups';
 import { Coaches } from './components/Coaches/Coaches';
 import { Events } from './components/Events/Events';
 import { FAQ } from './components/FAQ/FAQ';
+import { Gallery } from './components/Gallery/Gallery';
 import { Footer } from './components/Footer/Footer';
 import { Header } from './components/Header/Header';
 import { MobileDock } from './components/MobileDock/MobileDock';
@@ -24,6 +25,7 @@ function App() {
         <AgeGroups />
         <Locations />
         <Coaches />
+        <Gallery />
         <Events />
         <Testimonials />
         <FAQ />

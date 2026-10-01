@@ -9,10 +9,17 @@ export const navLinks = [
   { href: '#about', label: 'О клубе' },
   { href: '#groups', label: 'Группы' },
   { href: '#locations', label: 'Филиалы' },
+  { href: '#gallery', label: 'Галерея' },
   { href: '#coaches', label: 'Тренеры' },
   { href: '#reviews', label: 'Отзывы' },
   { href: '#faq', label: 'FAQ' },
 ];
+
+export const media = {
+  logo: '/media/logo.png',
+  hero: '/media/hero-training.jpg',
+  signupBg: '/media/gallery-dojo.jpg',
+};
 
 export const stats = [
   { value: '25+', label: 'лет в Москве' },
@@ -69,6 +76,8 @@ export const locations = [
     address: 'Осенний бульвар, д. 4, здание МГТС, 6 этаж',
     priceFrom: 'от 6 400 ₽/мес',
     metro: 'Крылатское',
+    image: '/media/branch-krylatskoe.jpg',
+    imageAlt: 'Тренировка каратэ в филиале Крылатское',
   },
   {
     id: 'lyublino',
@@ -76,6 +85,8 @@ export const locations = [
     address: 'Ставропольская ул., д. 13, бассейн «Люблино»',
     priceFrom: 'от 6 400 ₽/мес',
     metro: 'Люблино',
+    image: '/media/branch-lyublino.jpg',
+    imageAlt: 'Тренировка каратэ в филиале Люблино',
   },
   {
     id: 'mitino',
@@ -83,6 +94,8 @@ export const locations = [
     address: 'Митинская ул., д. 24а, стр. 1, Republika, 2 этаж',
     priceFrom: 'от 6 400 ₽/мес',
     metro: 'Митино',
+    image: '/media/branch-mitino.jpg',
+    imageAlt: 'Тренировка каратэ в филиале Митино',
   },
 ];
 
@@ -108,9 +121,58 @@ export const coaches = [
 ];
 
 export const events = [
-  { date: '26 июля 2026', title: 'Russia Open-2026 — лагерь и турнир' },
-  { date: '24 июля 2026', title: 'II Национальная аттестация ФКР' },
-  { date: '27 марта 2026', title: 'Летние спортивные сборы (август 2026)' },
+  {
+    date: '26 июля 2026',
+    title: 'Russia Open-2026 — лагерь и турнир',
+    image: '/media/event-russia-open.jpg',
+    imageAlt: 'Международный тренировочный лагерь и турнир «Russia Open-2026»',
+  },
+  {
+    date: '24 июля 2026',
+    title: 'II Национальная аттестация ФКР',
+    image: '/media/event-attestation.jpg',
+    imageAlt: 'II Национальная аттестация ФКР',
+  },
+  {
+    date: '27 марта 2026',
+    title: 'Летние спортивные сборы (август 2026)',
+    image: '/media/event-camp.jpg',
+    imageAlt: 'Летние спортивные сборы (август 2026)',
+  },
+];
+
+export const galleryItems = [
+  {
+    src: '/media/hero-training.jpg',
+    alt: 'Дети на тренировке каратэ',
+    caption: 'Тренировка в группе',
+    featured: true,
+  },
+  {
+    src: '/media/gallery-competition.jpg',
+    alt: 'Участники соревнований по каратэ',
+    caption: 'Соревнования WKF',
+  },
+  {
+    src: '/media/gallery-dojo.jpg',
+    alt: 'Тренировка в зале Сюдзин',
+    caption: 'Зал клуба',
+  },
+  {
+    src: '/media/branch-mitino.jpg',
+    alt: 'Тренировка каратэ в филиале Митино',
+    caption: 'Филиал Митино',
+  },
+  {
+    src: '/media/branch-krylatskoe.jpg',
+    alt: 'Тренировка каратэ в филиале Крылатское',
+    caption: 'Филиал Крылатское',
+  },
+  {
+    src: '/media/branch-lyublino.jpg',
+    alt: 'Тренировка каратэ в филиале Люблино',
+    caption: 'Филиал Люблино',
+  },
 ];
 
 export const testimonials = [
