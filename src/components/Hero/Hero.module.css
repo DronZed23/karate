@@ -205,3 +205,52 @@
     display: none;
   }
 }
+
+@media (max-width: 767px) {
+  .hero {
+    min-height: auto;
+    align-items: flex-start;
+    padding-top: 24px;
+    padding-bottom: 40px;
+  }
+
+  .inner {
+    gap: 28px;
+  }
+
+  .title {
+    font-size: clamp(2rem, 9vw, 2.75rem);
+  }
+
+  .eyebrow {
+    letter-spacing: 0.1em;
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  .badges {
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .badge {
+    font-size: 10px;
+    padding: 7px 12px;
+  }
+
+  .heroActions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .primaryBtn,
+  .ghostBtn {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .bgImage {
+    opacity: 0.35;
+    background-position: 70% 20%;
+  }
+}

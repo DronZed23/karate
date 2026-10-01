@@ -97,3 +97,20 @@
   border-color: rgba(201, 162, 39, 0.45);
   background: rgba(201, 162, 39, 0.08);
 }
+
+@media (max-width: 767px) {
+  .actions {
+    flex-direction: column;
+  }
+
+  .primary,
+  .secondary {
+    width: 100%;
+    min-height: 48px;
+    justify-content: center;
+  }
+
+  .card h3 {
+    font-size: 1.65rem;
+  }
+}

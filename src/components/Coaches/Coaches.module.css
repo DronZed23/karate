@@ -132,3 +132,22 @@
 .footer a:hover {
   color: var(--gold-bright);
 }
+
+@media (max-width: 767px) {
+  .body h3 {
+    font-size: 1.65rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .rank {
+    left: 12px;
+    bottom: 12px;
+    max-width: calc(100% - 24px);
+    font-size: 10px;
+  }
+}

@@ -50,3 +50,22 @@
 .dark .kicker {
   color: var(--gold-bright);
 }
+
+@media (max-width: 767px) {
+  .head {
+    margin-bottom: 28px;
+  }
+
+  .kicker {
+    letter-spacing: 0.12em;
+    font-size: 10px;
+  }
+
+  .title {
+    font-size: clamp(1.65rem, 7vw, 2.25rem);
+  }
+
+  .sub {
+    font-size: 0.98rem;
+  }
+}

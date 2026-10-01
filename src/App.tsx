@@ -5,6 +5,7 @@ import { Events } from './components/Events/Events';
 import { FAQ } from './components/FAQ/FAQ';
 import { Footer } from './components/Footer/Footer';
 import { Header } from './components/Header/Header';
+import { MobileDock } from './components/MobileDock/MobileDock';
 import { Hero } from './components/Hero/Hero';
 import { Locations } from './components/Locations/Locations';
 import { Signup } from './components/Signup/Signup';
@@ -29,6 +30,7 @@ function App() {
         <Signup />
       </main>
       <Footer />
+      <MobileDock />
     </div>
   );
 }

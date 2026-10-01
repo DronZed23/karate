@@ -1,5 +1,5 @@
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { contacts, navLinks } from '../../data/content';
 import styles from './Header.module.css';
 
@@ -7,8 +7,16 @@ export function Header() {
   const { scrollY } = useScroll();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const primaryPhone = contacts.phones[0];
 
   useMotionValueEvent(scrollY, 'change', (v) => setScrolled(v > 24));
+
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [open]);
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
@@ -42,14 +50,17 @@ export function Header() {
         </nav>
 
         <div className={styles.actions}>
+          <a href={`tel:${primaryPhone.replace(/\D/g, '')}`} className={styles.phone}>
+            {primaryPhone}
+          </a>
           <a href="#signup" className={styles.cta}>
             Записаться
           </a>
           <button
             type="button"
-            className={styles.burger}
+            className={`${styles.burger} ${open ? styles.burgerOpen : ''}`}
             aria-expanded={open}
-            aria-label="Меню"
+            aria-label={open ? 'Закрыть меню' : 'Открыть меню'}
             onClick={() => setOpen((v) => !v)}
           >
             <span />
@@ -63,6 +74,7 @@ export function Header() {
         initial={false}
         animate={{ height: open ? 'auto' : 0, opacity: open ? 1 : 0 }}
         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+        aria-hidden={!open}
       >
         <nav aria-label="Мобильная навигация">
           {navLinks.map((link) => (
@@ -70,6 +82,9 @@ export function Header() {
               {link.label}
             </a>
           ))}
+          <a href={`tel:${primaryPhone.replace(/\D/g, '')}`} className={styles.mobilePhone}>
+            {primaryPhone}
+          </a>
           <a href="#signup" className={styles.mobileCta} onClick={() => setOpen(false)}>
             Бесплатное пробное занятие
           </a>

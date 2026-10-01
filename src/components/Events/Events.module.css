@@ -35,6 +35,12 @@
   transform: translateX(4px);
 }
 
+@media (hover: none) {
+  .listItem:hover {
+    transform: none;
+  }
+}
+
 .date {
   font-size: 13px;
   font-weight: 800;

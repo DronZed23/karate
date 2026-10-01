@@ -16,7 +16,8 @@
   --shadow-soft: 0 24px 80px rgba(12, 15, 20, 0.12);
   --shadow-card: 0 12px 40px rgba(12, 15, 20, 0.08);
   --max: 1180px;
-  --header-h: 76px;
+  --header-h: 68px;
+  --mobile-dock-h: 72px;
 
   min-height: 100vh;
   background:
@@ -26,4 +27,20 @@
 
 .main {
   overflow-x: clip;
+}
+
+@media (max-width: 767px) {
+  .app {
+    --header-h: 64px;
+  }
+
+  .main {
+    padding-bottom: calc(var(--mobile-dock-h) + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+@media (min-width: 960px) {
+  .app {
+    --header-h: 76px;
+  }
 }

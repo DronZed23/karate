@@ -37,3 +37,17 @@
   box-shadow: var(--shadow-soft);
   border-color: rgba(201, 162, 39, 0.22);
 }
+
+@media (max-width: 767px) {
+  .section,
+  .sectionAlt,
+  .sectionBand {
+    padding-block: clamp(48px, 12vw, 72px);
+  }
+}
+
+@media (hover: none) {
+  .cardInteractive:hover {
+    transform: none;
+  }
+}
