@@ -1,0 +1,39 @@
+.section {
+  padding: clamp(64px, 10vw, 100px) clamp(16px, 4vw, 32px);
+}
+
+.sectionAlt {
+  composes: section;
+  background:
+    linear-gradient(180deg, rgba(201, 162, 39, 0.05), transparent 55%),
+    var(--paper);
+}
+
+.sectionBand {
+  composes: section;
+  background: linear-gradient(165deg, var(--ink-soft) 0%, var(--ink) 100%);
+  color: #f8f6f2;
+}
+
+.shell {
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.card {
+  border-radius: var(--radius-lg);
+  background: var(--paper-elevated);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-card);
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.cardInteractive:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-soft);
+  border-color: rgba(201, 162, 39, 0.22);
+}

@@ -1,0 +1,99 @@
+.section {
+  composes: section from '../../styles/shared.module.css';
+}
+
+.container {
+  composes: shell from '../../styles/shared.module.css';
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  composes: card cardInteractive from '../../styles/shared.module.css';
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  min-height: 100%;
+}
+
+.metro {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 6px 12px;
+  margin-bottom: 16px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--crimson-deep);
+  background: rgba(196, 30, 58, 0.08);
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.address {
+  margin: 0 0 16px;
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.price {
+  margin: 0 0 20px;
+  font-weight: 800;
+  font-size: 15px;
+  color: var(--gold);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.primary,
+.secondary {
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.primary {
+  color: #fff;
+  background: linear-gradient(135deg, var(--crimson), var(--crimson-deep));
+  box-shadow: 0 8px 20px rgba(196, 30, 58, 0.25);
+}
+
+.primary:hover {
+  transform: translateY(-1px);
+}
+
+.secondary {
+  border: 1px solid var(--line);
+  color: var(--ink);
+  background: transparent;
+}
+
+.secondary:hover {
+  border-color: rgba(201, 162, 39, 0.45);
+  background: rgba(201, 162, 39, 0.08);
+}

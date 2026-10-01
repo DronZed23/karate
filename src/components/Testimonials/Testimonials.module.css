@@ -1,0 +1,45 @@
+.section {
+  composes: sectionAlt from '../../styles/shared.module.css';
+}
+
+.container {
+  composes: shell from '../../styles/shared.module.css';
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  composes: card cardInteractive from '../../styles/shared.module.css';
+  margin: 0;
+  height: 100%;
+  padding: 28px 24px;
+}
+
+.stars {
+  margin-bottom: 14px;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+}
+
+.card p {
+  margin: 0 0 16px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.card footer {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+}

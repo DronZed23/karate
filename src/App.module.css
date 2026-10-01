@@ -1,0 +1,29 @@
+.app {
+  --ink: #0c0f14;
+  --ink-soft: #1a2030;
+  --paper: #f7f4ef;
+  --paper-elevated: #fffdf9;
+  --muted: #5c6478;
+  --line: rgba(12, 15, 20, 0.08);
+  --gold: #c9a227;
+  --gold-bright: #e8c547;
+  --crimson: #c41e3a;
+  --crimson-deep: #8b1530;
+  --glow: rgba(201, 162, 39, 0.35);
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 10px;
+  --shadow-soft: 0 24px 80px rgba(12, 15, 20, 0.12);
+  --shadow-card: 0 12px 40px rgba(12, 15, 20, 0.08);
+  --max: 1180px;
+  --header-h: 76px;
+
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(201, 162, 39, 0.12), transparent),
+    var(--paper);
+}
+
+.main {
+  overflow-x: clip;
+}

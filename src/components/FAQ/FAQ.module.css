@@ -1,0 +1,64 @@
+.section {
+  composes: section from '../../styles/shared.module.css';
+  background: var(--paper-elevated);
+  border-top: 1px solid var(--line);
+}
+
+.container {
+  composes: shell from '../../styles/shared.module.css';
+  max-width: 720px;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.item {
+  composes: card from '../../styles/shared.module.css';
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  padding: 20px 22px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--ink);
+}
+
+.icon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  font-weight: 400;
+  background: rgba(12, 15, 20, 0.06);
+}
+
+.panel {
+  overflow: hidden;
+}
+
+.panel p {
+  margin: 0;
+  padding: 0 22px 20px;
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.6;
+}
